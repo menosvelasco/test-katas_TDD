@@ -30,6 +30,7 @@ class TestKatas(unittest.TestCase):
 
         for index, value in enumerate(list_fib):
             self.assertEqual(katas.fibonacci(index), value)
+            self.assertRaises(ValueError, katas.fibonacci, -5)
 
 
 if __name__ == '__main__':
